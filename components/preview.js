@@ -8,6 +8,7 @@ const Preview = ({
 }) => {
   return (
     <div
+      id="preview"
       className="text-base w-[300px] h-[156px] md:text-2xl md:w-[450px] md:h-[234px] lg:text-3xl lg:w-[600px] lg:h-[314px]"
       style={{ backgroundColor }}
     >

@@ -21,7 +21,7 @@ export async function getScreenshot(
   console.log('getScreenshot', url);
   const page = await getPage(isDev);
   console.log('page', page);
-  // await page.setViewport({ width: 2048, height: 1170 });
+  await page.setViewport({ width: 2048, height: 1170 });
   await page.goto(url, {
     waitUntil: 'networkidle0',
   });

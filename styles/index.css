@@ -39,27 +39,27 @@ body {
   font-size: 1.25em;
   line-height: 1.25em;
   padding-top: 0.375em;
+  margin-bottom: 0.375em;
   font-weight: bold;
 }
 .font-title.font-serif {
-  transform: scaleY(0.9);
+  transform: scaleY(0.95);
   transform-origin: 0 0;
-  margin-bottom: -0.225em;
+  line-height: 1.25em;
+  margin-bottom: 0.1em;
 }
 .font-title.font-sans {
-  font-size: 1.25em;
-  line-height: 1.1em;
-  margin-top: -0.05em;
-  /* margin-bottom: -0.225em; */
-  letter-spacing: 0.025em;
+  line-height: 1.075em;
+  padding-bottom: 0.13em;
+  margin-bottom: 0.28em;
+  letter-spacing: 0.02em;
 }
 .font-title.font-mono {
-  font-size: 1.125em;
-  line-height: 1.24em;
-  padding-top: 0.4375em;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  margin-bottom: 0.025em;
+  font-size: 1.15em;
+  line-height: 1.175em;
+  padding-top: 0.45em;
+  margin-bottom: 0.4em;
+  letter-spacing: -0.04em;
 }
 .font-description {
   font-size: 0.75em;

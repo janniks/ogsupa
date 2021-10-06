@@ -6,15 +6,11 @@ const HeadFonts = () => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
         rel="stylesheet"
       />
       <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap"
         rel="stylesheet"
       />
       <link
@@ -26,7 +22,7 @@ const HeadFonts = () => {
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap"
         rel="stylesheet"
       />
     </>

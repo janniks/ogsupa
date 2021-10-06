@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/solid';
 
 import { TwitterPicker } from 'react-color';
-import Preview from 'components/preview';
+import Preview from 'components/Preview';
 
 export default function IndexPage() {
   const [title, setTitle] = useState('The Second Coming of the Search Engine');

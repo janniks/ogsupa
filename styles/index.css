@@ -50,6 +50,7 @@ body {
   font-size: 1.125em;
   line-height: 1.25em;
   padding-top: 0.4375em;
+  /* margin-bottom: -0.225em; */
 }
 .font-title.font-mono {
   font-size: 1.125em;

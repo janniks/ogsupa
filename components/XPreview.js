@@ -8,7 +8,7 @@ const Preview = ({
 }) => {
   return (
     <div
-      id="preview"
+      // id="preview"
       className="text-base w-[300px] h-[156px] md:text-2xl md:w-[450px] md:h-[234px] lg:text-3xl lg:w-[600px] lg:h-[314px]"
       style={{ backgroundColor }}
     >
@@ -19,9 +19,7 @@ const Preview = ({
           >
             {title}
           </div>
-          {/* <div
-            className={`absolute inset-0 flex-none font-title font-serif line-clamp-2 overflow-ellipsis pt-[0.375em] text-gray-400`}
-          >
+          {/* <div className="absolute inset-0 flex-none font-title font-serif line-clamp-2 overflow-ellipsis text-gray-400">
             {title}
           </div> */}
           <div className="font-description font-sans line-clamp-3 pt-[0.375em] text-gray-200">

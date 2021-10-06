@@ -1,4 +1,4 @@
-import Preview from 'components/preview';
+import Preview from 'components/XPreview';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -37,32 +37,6 @@ export default function IndexPage() {
       <Head>
         <title>ogsupa</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
@@ -86,7 +60,6 @@ export default function IndexPage() {
                 Title
               </label>
               <input
-                id="title"
                 name="title"
                 type="text"
                 className="mt-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md"
@@ -103,7 +76,6 @@ export default function IndexPage() {
                 Description
               </label>
               <textarea
-                id="description"
                 name="description"
                 rows={3}
                 className="mt-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border border-gray-300 rounded-md"
@@ -122,7 +94,6 @@ export default function IndexPage() {
               </label>
               <div className="mt-1">
                 <select
-                  id="country"
                   name="country"
                   autoComplete="country"
                   className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md"
@@ -159,7 +130,6 @@ export default function IndexPage() {
                   Left Meta
                 </label>
                 <input
-                  id="left"
                   name="left"
                   type="text"
                   size={1}
@@ -176,7 +146,6 @@ export default function IndexPage() {
                   Right Meta
                 </label>
                 <input
-                  id="right"
                   name="right"
                   type="text"
                   size={1}

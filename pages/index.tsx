@@ -1,15 +1,8 @@
+import { ClipboardIcon, PhotographIcon } from '@heroicons/react/solid';
+import Preview from 'components/OGPreview';
+import { SliderPicker, TwitterPicker } from 'components/react-color';
 import Head from 'next/head';
-import Link from 'next/link';
 import { useState } from 'react';
-import {
-  ClipboardCopyIcon,
-  ClipboardIcon,
-  MailIcon,
-  PhotographIcon,
-} from '@heroicons/react/solid';
-
-import { TwitterPicker } from 'react-color';
-import Preview from 'components/Preview';
 
 export default function IndexPage() {
   const [title, setTitle] = useState('The Second Coming of the Search Engine');
@@ -115,9 +108,27 @@ export default function IndexPage() {
               </label>
               <div className="mt-1">
                 <TwitterPicker
+                  colors={[
+                    '#BF4F00',
+                    '#BD8B00',
+                    '#37CA8F',
+                    '#009C63',
+                    '#2EAAF9',
+                    '#056EAA',
+                    '#768B9D',
+                    '#B00F39',
+                    '#F13261',
+                    '#7300B3',
+                  ]}
                   color={backgroundColor}
                   onChangeComplete={(color) => setBackgroundColor(color.hex)}
-                  className="mt-3"
+                  className="m-auto mt-3"
+                  triangle="hide"
+                />
+
+                <SliderPicker
+                  color={backgroundColor}
+                  onChangeComplete={(color) => setBackgroundColor(color.hex)}
                 />
               </div>
             </div>

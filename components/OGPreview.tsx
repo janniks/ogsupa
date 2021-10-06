@@ -1,3 +1,5 @@
+import Color from 'color';
+
 const Preview = ({
   title,
   description,
@@ -6,6 +8,11 @@ const Preview = ({
   leftMeta,
   rightMeta,
 }) => {
+  const c = Color(backgroundColor);
+  const colors = c.isDark()
+    ? { title: c.lightness(95), meta: c.lightness(90) }
+    : { title: c.lightness(10), meta: c.lightness(20) };
+
   return (
     <div
       id="preview"
@@ -15,7 +22,8 @@ const Preview = ({
       <div className="flex flex-col justify-between h-full p-[0.8125em]">
         <div className="relative">
           <div
-            className={`font-title ${fontStyle} line-clamp-2 overflow-ellipsis text-white`}
+            className={`font-title ${fontStyle} line-clamp-2 overflow-ellipsis`}
+            style={{ color: colors.title }}
           >
             {title}
           </div>
@@ -27,11 +35,17 @@ const Preview = ({
               {description}
             </div>
           </div> */}
-          <div className="font-description font-sans line-clamp-3 text-gray-200">
+          <div
+            className="font-description font-sans line-clamp-3"
+            style={{ color: colors.meta }}
+          >
             {description}
           </div>
         </div>
-        <div className="flex font-meta font-sans text-gray-200">
+        <div
+          className="flex font-meta font-sans"
+          style={{ color: colors.meta }}
+        >
           <div className="flex-1">{leftMeta}</div>
           <div className="flex-1 text-right">{rightMeta}</div>
         </div>

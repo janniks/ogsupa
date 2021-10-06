@@ -1,4 +1,4 @@
-import Preview from 'components/preview';
+import Preview from 'components/OGPreview';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import HeadFonts from '../components/HeadFonts';

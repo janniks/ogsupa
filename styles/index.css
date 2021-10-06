@@ -47,10 +47,11 @@ body {
   margin-bottom: -0.225em;
 }
 .font-title.font-sans {
-  font-size: 1.125em;
-  line-height: 1.25em;
-  padding-top: 0.4375em;
+  font-size: 1.25em;
+  line-height: 1.1em;
+  margin-top: -0.05em;
   /* margin-bottom: -0.225em; */
+  letter-spacing: 0.025em;
 }
 .font-title.font-mono {
   font-size: 1.125em;

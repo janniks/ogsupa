@@ -1,4 +1,3 @@
-import Preview from 'components/Preview';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -10,6 +9,7 @@ import {
 } from '@heroicons/react/solid';
 
 import { TwitterPicker } from 'react-color';
+import Preview from 'components/preview';
 
 export default function IndexPage() {
   const [title, setTitle] = useState('The Second Coming of the Search Engine');

@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     const url = parse(req.url || '/', true);
     const queryString = new URLSearchParams(url.query).toString();
 
-    const fileType = url.fileType || 'png';
+    const fileType = url.query.fileType || 'png';
 
     const file = await getScreenshot(
       `${HOST}/preview?${queryString}`,

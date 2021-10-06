@@ -1,4 +1,4 @@
-import Preview from 'components/XPreview';
+import Preview from 'components/Preview';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

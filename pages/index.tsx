@@ -1,5 +1,5 @@
 import { ClipboardIcon, PhotographIcon } from '@heroicons/react/solid';
-import Preview from 'components/OGPreview';
+import OGPreview from 'components/OGPreview';
 import { SliderPicker, TwitterPicker } from 'components/react-color';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -187,7 +187,7 @@ export default function IndexPage() {
             {/* PREVIEW COLUMN */}
             <div className="flex flex-1 flex-col">
               <div className="rounded-md overflow-hidden box-pink">
-                <Preview {...previewProps} />
+                <OGPreview {...previewProps} />
               </div>
               <div className="block w-[300px] md:w-[450px] lg:w-[600px] text-center mt-4 space-y-2">
                 <div className="buttons">
@@ -237,13 +237,17 @@ export default function IndexPage() {
                       ℹ️
                     </span>
                   </div>
-                  <p>
-                    <span className="font-bold">og:images</span> are used to
-                    show preview thumbnails in social media. They‘re very
-                    important if you want to stand out in a sea of feeds. Too
-                    often we see empty link previews and lose interest for it‘s
-                    content. Sadly, our brains have been trained for big
-                    colorful text. So, grab a color that pops for a good start!
+                  <p className="">
+                    <span className="font-bold border-0 border-b-4">
+                      og:images
+                    </span>{' '}
+                    are used to show preview thumbnails in social media. They‘re
+                    very important, if you want to stand out in a sea of feeds.
+                    Too often we see an empty link preview and lose interest for
+                    it‘s content. Sadly, our brains have been trained to spot
+                    color in hoards of text. So, grab a{' '}
+                    <span className="underline-heart">color</span> that pops for
+                    a good start!
                   </p>
                 </div>
               </div>

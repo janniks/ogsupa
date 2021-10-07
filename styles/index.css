@@ -139,3 +139,14 @@ div.background {
 .input:focus {
   border: 2px solid #7801fd;
 }
+
+.underline-heart {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/heart.png');
+  background-position: 0 16px;
+  background-size: 15px 9px;
+  background-repeat: repeat-x;
+  padding-bottom: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: #e62000;
+}

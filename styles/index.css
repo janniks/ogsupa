@@ -73,11 +73,69 @@ body {
 .patterns {
   /* background-image: url('/geometry.png'); */
   /* background-image: url('/geot@2x.png'); */
+  /* background-image: url('/gl.png'); */
+  background-image: url('/gp.png');
   /* background-size: 48rem; */
 
-  background-image: url('/playstation-pattern.png');
-  background-size: 32rem;
+  /* background-image: url('/playstation-pattern.png'); */
+  /* background-size: 32rem; */
 
   /* background-image: url('/light_toast-50.png'); */
   /* background-size: 32rem; */
+}
+
+div.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: repeating-linear-gradient(
+    -55deg,
+    #fff6f4,
+    #fff6f4 10px,
+    #fff2ee 10px,
+    #fff2ee 20px
+  );
+}
+
+.box {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(0, 0, 0, 0.05),
+    0 0 10px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.15),
+    0 6px 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15),
+    0 20px 20px rgba(0, 0, 0, 0.2), 0 40px 40px rgba(0, 0, 0, 0.15);
+}
+
+.box-sm {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(0, 0, 0, 0.05),
+    0 0 10px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.15),
+    0 6px 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box-pink {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(55, 0, 55, 0.05),
+    0 0 10px rgba(55, 0, 55, 0.01), 0 2px 6px rgba(55, 0, 55, 0.1),
+    0 6px 10px rgba(55, 0, 55, 0.01), 0 10px 10px rgba(55, 0, 55, 0.1),
+    0 20px 15px rgba(55, 0, 55, 0.1), 0 40px 30px rgba(55, 0, 55, 0.05);
+}
+
+.box-pink-sm {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(55, 0, 55, 0.05),
+    0 0 10px rgba(55, 0, 55, 0.01), 0 2px 6px rgba(55, 0, 55, 0.1),
+    0 6px 10px rgba(55, 0, 55, 0.01), 0 10px 20px rgba(55, 0, 55, 0.05);
+}
+
+.og {
+  border: 8px solid black;
+  box-shadow: -8px 0 0 0 #7801fd, -16px 0 0 0 #f804ef, -24px 0 0 0 #f3b0a0;
+}
+.og-parent {
+  box-shadow: 0 0 0 8px white;
+}
+
+.input {
+  border: 2px solid #f3b0a0;
+}
+.input:focus {
+  border: 2px solid #7801fd;
 }

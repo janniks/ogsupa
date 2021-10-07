@@ -2,8 +2,7 @@ import { IncomingMessage } from 'http';
 import { parse } from 'url';
 import { ParsedRequest, Theme } from './types';
 
-export function parseRequest(req: IncomingMessage) {
-  console.log('HTTP ' + req.url);
+export function parseRequest(req) {
   const { pathname, query } = parse(req.url || '/', true);
   return query || {};
 

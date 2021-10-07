@@ -1,8 +1,8 @@
 import core from 'puppeteer-core';
 import { getOptions } from './options';
-let _page: core.Page | null;
+let _page;
 
-async function getPage(isDev: boolean) {
+async function getPage(isDev) {
   if (_page) {
     return _page;
   }
@@ -12,10 +12,8 @@ async function getPage(isDev: boolean) {
   return _page;
 }
 
-export async function getScreenshot(url: string, type: string, isDev: boolean) {
-  console.log('getScreenshot', url);
+export async function getScreenshot(url, type, isDev) {
   const page = await getPage(isDev);
-  console.log('page', page);
   await page.setViewport({ width: 2048, height: 1024, deviceScaleFactor: 2 });
   await page.goto(url, {
     waitUntil: 'networkidle0',

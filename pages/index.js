@@ -1,5 +1,6 @@
 import { ClipboardIcon, PhotographIcon } from '@heroicons/react/solid';
 import OGPreview from 'components/OGPreview';
+import Sparkle from 'components/Sparkle';
 import { SliderPicker, TwitterPicker } from 'components/react-color';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -23,6 +24,20 @@ export default function IndexPage() {
     leftMeta,
     rightMeta,
   };
+
+  // todo: don't do this on every render
+  const isSafari =
+    typeof window !== 'undefined'
+      ? /constructor/i.test(window.HTMLElement) ||
+        (function (p) {
+          return p.toString() === '[object SafariRemoteNotification]';
+        })(
+          !window['safari'] ||
+            (typeof safari !== 'undefined' && safari.pushNotification)
+        )
+      : false;
+
+  // const isSafari = false;
 
   const previewQuery = new URLSearchParams(previewProps).toString();
 
@@ -242,12 +257,15 @@ export default function IndexPage() {
                       og:images
                     </span>{' '}
                     are used to show preview thumbnails in social media. They‘re
-                    very important, if you want to stand out in a sea of feeds.
-                    Too often we see an empty link preview and lose interest for
-                    it‘s content. Sadly, our brains have been trained to spot
-                    color in hoards of text. So, grab a{' '}
-                    <span className="underline-heart">color</span> that pops for
-                    a good start!
+                    very important, if you want to
+                    <span className="relative">
+                      <Sparkle> stand out </Sparkle>
+                    </span>
+                    in a sea of feeds. Too often we see an empty link preview
+                    and lose interest for it‘s content. Sadly, our brains have
+                    been trained to spot color in hoards of text. So, grab a
+                    <span className="underline-heart"> color </span> that pops
+                    for a good start!
                   </p>
                 </div>
               </div>
@@ -257,30 +275,25 @@ export default function IndexPage() {
           <footer className="text-center w-full">
             <div className="inline-block m-4 mx-auto rounded-3xl box-pink">
               <div className="inline-block pl-6 rounded-3xl og-parent">
-                <div className="inline-block p-4 bg-white rounded-3xl og ">
-                  <a
-                    className=""
-                    href="https://twitter.com/jnnksbrt/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🇦🇹 Powered by Schnitzel 🐮
-                  </a>
-                  <span className="ml-1 sm:hidden md:hidden lg:hidden xl:hidden">
-                    default (&lt; 640px)
+                <a
+                  className="relative inline-block p-4 bg-white rounded-3xl og font-medium"
+                  href="https://twitter.com/jnnksbrt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Built in <span className="relative top-[1px]">🇦🇹</span>&nbsp;
+                  {!isSafari && <>&nbsp;</>}by{' '}
+                  <span className="font-bold underline">@jnnksbrt</span> —
+                  powered by <strong>Supabase ⚡️</strong>
+                </a>
+                <div className="absolute top-0 right-1 text-xs font-extrabold text-gray-300">
+                  <span className="sm:hidden md:hidden lg:hidden xl:hidden">
+                    &bull;
                   </span>
-                  <span className="ml-1 hidden sm:inline md:hidden font-extrabold">
-                    sm
-                  </span>
-                  <span className="ml-1 hidden md:inline lg:hidden font-extrabold">
-                    md
-                  </span>
-                  <span className="ml-1 hidden lg:inline xl:hidden font-extrabold">
-                    lg
-                  </span>
-                  <span className="ml-1 hidden xl:inline font-extrabold">
-                    xl
-                  </span>
+                  <span className="hidden sm:inline md:hidden">sm</span>
+                  <span className="hidden md:inline lg:hidden">md</span>
+                  <span className="hidden lg:inline xl:hidden">lg</span>
+                  <span className="hidden xl:inline">xl</span>
                 </div>
               </div>
             </div>

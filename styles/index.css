@@ -69,3 +69,15 @@ body {
   font-size: 0.5em;
   line-height: 1.25em;
 }
+
+.patterns {
+  /* background-image: url('/geometry.png'); */
+  /* background-image: url('/geot@2x.png'); */
+  /* background-size: 48rem; */
+
+  background-image: url('/playstation-pattern.png');
+  background-size: 32rem;
+
+  /* background-image: url('/light_toast-50.png'); */
+  /* background-size: 32rem; */
+}

@@ -25,12 +25,12 @@ export const Twitter = ({
             width,
             background: '#fff',
             border: '0 solid rgba(0,0,0,0.25)',
-            boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
+            // boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
             borderRadius: '4px',
             position: 'relative',
           },
           body: {
-            padding: '15px 9px 9px 15px',
+            padding: '0px',
           },
           label: {
             fontSize: '18px',
@@ -54,8 +54,8 @@ export const Twitter = ({
           },
           hash: {
             background: '#F0F0F0',
-            height: '30px',
-            width: '30px',
+            height: '26px',
+            width: '26px',
             borderRadius: '4px 0 0 4px',
             float: 'left',
             color: '#98A1A4',
@@ -64,12 +64,12 @@ export const Twitter = ({
             justifyContent: 'center',
           },
           input: {
-            width: '100px',
+            width: '88px',
             fontSize: '14px',
             color: '#666',
             border: '0px',
             outline: 'none',
-            height: '30px',
+            height: '26px',
             boxShadow: 'inset 0 0 0 1px #F0F0F0',
             boxSizing: 'content-box',
             borderRadius: '0 4px 4px 0',
@@ -77,8 +77,8 @@ export const Twitter = ({
             paddingLeft: '8px',
           },
           swatch: {
-            width: '30px',
-            height: '30px',
+            width: '26px',
+            height: '26px',
             float: 'left',
             borderRadius: '4px',
             margin: '0 6px 6px 0',
@@ -178,7 +178,7 @@ Twitter.propTypes = {
 };
 
 Twitter.defaultProps = {
-  width: 276,
+  width: 224,
   colors: [
     '#FF6900',
     '#FCB900',

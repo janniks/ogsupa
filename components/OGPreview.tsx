@@ -1,6 +1,6 @@
 import Color from 'color';
 
-const Preview = ({
+const OGPreview = ({
   title,
   description,
   fontStyle,
@@ -54,4 +54,4 @@ const Preview = ({
   );
 };
 
-export default Preview;
+export default OGPreview;

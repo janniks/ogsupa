@@ -1,16 +1,16 @@
-import Preview from 'components/OGPreview';
+import OGPreview from 'components/OGPreview';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import HeadFonts from '../components/HeadFonts';
 
-const PreviewPage = ({}) => {
+const PreviewPage = () => {
   const router = useRouter();
   return (
     <>
       <Head>
         <HeadFonts />
       </Head>
-      <Preview {...router.query} />
+      <OGPreview {...router.query} />
     </>
   );
 };

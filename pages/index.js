@@ -257,10 +257,10 @@ export default function IndexPage() {
                       og:images
                     </span>{' '}
                     are used to show preview thumbnails in social media. They‘re
-                    very important, if you want to
+                    very important, if you want to{' '}
                     <span className="relative">
-                      <Sparkle> stand out </Sparkle>
-                    </span>
+                      <Sparkle>stand out</Sparkle>
+                    </span>{' '}
                     in a sea of feeds. Too often we see an empty link preview
                     and lose interest for it‘s content. Sadly, our brains have
                     been trained to spot color in hoards of text. So, grab a

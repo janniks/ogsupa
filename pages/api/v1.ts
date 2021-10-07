@@ -10,9 +10,11 @@ export default async function handler(req, res) {
   try {
     console.log('HTTP ' + req.url);
     const url = parse(req.url || '/', true);
-    const queryString = new URLSearchParams(url.query).toString();
+    const queryString = new URLSearchParams(url.query.toString()).toString();
 
-    const fileType = url.query.fileType || 'png';
+    const fileType = Array.isArray(url.query.fileType)
+      ? url.query.fileType[0] || 'png'
+      : url.query.fileType || 'png';
 
     const file = await getScreenshot(
       `${HOST}/preview?${queryString}`,

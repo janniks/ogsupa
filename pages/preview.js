@@ -5,6 +5,9 @@ import HeadFonts from '../components/HeadFonts';
 
 const PreviewPage = () => {
   const router = useRouter();
+
+  // todo: query to short props
+
   return (
     <>
       <Head>
@@ -14,5 +17,7 @@ const PreviewPage = () => {
     </>
   );
 };
+
+PreviewPage.getLayout = (page) => page;
 
 export default PreviewPage;

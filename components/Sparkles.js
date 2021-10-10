@@ -1,3 +1,4 @@
+import { useHasMounted } from 'lib/helpers';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 
@@ -78,6 +79,8 @@ const generateSparkle = (color) => {
   return sparkle;
 };
 const Sparkles = ({ color = DEFAULT_COLOR, children, ...delegated }) => {
+  const hasMounted = useHasMounted();
+
   const [sparkles, setSparkles] = useState(() => {
     return range(3).map(() => generateSparkle(color));
   });
@@ -96,6 +99,11 @@ const Sparkles = ({ color = DEFAULT_COLOR, children, ...delegated }) => {
     prefersReducedMotion ? null : 50,
     prefersReducedMotion ? null : 450
   );
+
+  if (!hasMounted) {
+    return <>{children}</>;
+  }
+
   return (
     <Wrapper {...delegated}>
       {sparkles.map((sparkle) => (

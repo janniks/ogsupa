@@ -3,12 +3,12 @@ import Color from 'color';
 const OGPreview = ({
   title,
   description,
-  fontStyle,
-  backgroundColor,
-  leftMeta,
-  rightMeta,
+  font_style,
+  background_color,
+  left_meta,
+  right_meta,
 }) => {
-  const c = Color(backgroundColor);
+  const c = Color(background_color);
   const colors = c.isDark()
     ? { title: c.lightness(95), meta: c.lightness(90) }
     : { title: c.lightness(10), meta: c.lightness(20) };
@@ -17,12 +17,12 @@ const OGPreview = ({
     <div
       id="preview"
       className="text-base w-[300px] h-[156px] md:text-2xl md:w-[450px] md:h-[234px] lg:text-3xl lg:w-[600px] lg:h-[314px]"
-      style={{ backgroundColor }}
+      style={{ backgroundColor: background_color }}
     >
       <div className="flex flex-col justify-between h-full p-[0.8125em]">
         <div className="relative">
           <div
-            className={`font-title ${fontStyle} line-clamp-2 overflow-ellipsis`}
+            className={`font-title ${font_style} line-clamp-2 overflow-ellipsis`}
             style={{ color: colors.title }}
           >
             {title}
@@ -46,8 +46,8 @@ const OGPreview = ({
           className="flex font-meta font-sans"
           style={{ color: colors.meta }}
         >
-          <div className="flex-1">{leftMeta}</div>
-          <div className="flex-1 text-right">{rightMeta}</div>
+          <div className="flex-1">{left_meta}</div>
+          <div className="flex-1 text-right">{right_meta}</div>
         </div>
       </div>
     </div>

@@ -47,7 +47,7 @@ add our`<meta>` tag to your HTML `<head>` and you're good to go!
   - [x] to store data?
   - [ ] realtime?
   - [x] auth?
-  - [] storage? **COMING SOON**
+  - [ ] storage? **COMING SOON**
 
 ## License ⚖️
 

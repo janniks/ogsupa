@@ -25,6 +25,11 @@ const MainLayout = ({ children }) => {
           <Head>
             <title>ogsupa</title>
             <link rel="icon" href="/favicon.ico" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+              property="og:image"
+              content="https://ogsupa.com/ogimage.png"
+            />
           </Head>
           <Toaster />
           <div className="flex flex-row md:flex-row items-center justify-center w-full text-center">

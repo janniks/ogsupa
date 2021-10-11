@@ -40,6 +40,16 @@ add our`<meta>` tag to your HTML `<head>` and you're good to go!
 - [ ] Add different styles with borders
 - [ ] Add image upload for logos and background images
 
+### Hackathon Information
+
+- link to hosted demo
+- list of team members handles: [GitHub @janniks](https://github.com/janniks), [Twitter @jnnksbrt](https://twitter.com/jnnksbrt)
+- a brief description of how you used Supabase:
+  - [x] to store data?
+  - [ ] realtime?
+  - [x] auth?
+  - [] storage? **COMING SOON**
+
 ## License ⚖️
 
 [MIT](https://github.com/janniks/ogsupa/raw/main/LICENSE)

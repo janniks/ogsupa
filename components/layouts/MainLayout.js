@@ -1,3 +1,4 @@
+import { StarIcon } from '@heroicons/react/solid';
 import Head from 'next/head';
 import { Toaster } from 'react-hot-toast';
 
@@ -65,6 +66,16 @@ const MainLayout = ({ children }) => {
               </div>
             </div>
           </footer>
+        </div>
+        <div className="absolute top-0 right-4">
+          <a
+            href="https://github.com/janniks/ogsupa"
+            target="_blank"
+            className="mt-6 -mb-20 box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm text-md leading-4 rounded-md text-white focus:outline-none bg-gray-900"
+          >
+            <StarIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
+            GitHub
+          </a>
         </div>
       </div>
     </div>

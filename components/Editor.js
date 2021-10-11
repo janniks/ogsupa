@@ -292,9 +292,36 @@ export default function Editor({ projectId, projectData }) {
             </p>
             <CodeBlock
               className="relative mb-7"
-              code="https://ogsupa.com/api/v1?title=YOUR_TITLE"
+              code="https://ogsupa.com/api/v1?title=YOUR_TITLE&des..."
               copy={false}
             />
+            <p className="mb-6">
+              Simply, encode and set all the fields as GET parameters:{' '}
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                title
+              </code>
+              ,
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                description
+              </code>
+              ,{' '}
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                background_color
+              </code>
+              ,{' '}
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                font_style
+              </code>
+              ,{' '}
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                left_meta
+              </code>
+              ,{' '}
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                right_meta
+              </code>
+              .
+            </p>
             <p>
               For Twitter add{' '}
               <a

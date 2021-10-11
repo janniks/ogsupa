@@ -10,12 +10,11 @@
 <h3 align="center">
   <a href="#features">Features</a>
   <span> · </span>
-  <a href="">Demo</a>
+  <a href="https://ogsupa.com">Demo</a>
   <span> · </span>
   <a href="#roadmap-">Roadmap</a>
   <span> · </span>
   <a href="#license-%EF%B8%8F">License</a>
-  <span> · </span>
 
 </h3>
 
@@ -30,7 +29,7 @@ add our`<meta>` tag to your HTML `<head>` and you're good to go!
 - 🎨 Generate customizable og:images in realtime
 - 🚀 Save many different project styles for editing
 
-## [Demo]()
+## [Demo](https://ogsupa.com)
 
 ## Roadmap 🚂
 
@@ -42,7 +41,7 @@ add our`<meta>` tag to your HTML `<head>` and you're good to go!
 
 ### Hackathon Information
 
-- link to hosted demo
+- [link to hosted demo](https://ogsupa.com)
 - list of team members handles: [GitHub @janniks](https://github.com/janniks), [Twitter @jnnksbrt](https://twitter.com/jnnksbrt)
 - a brief description of how you used Supabase:
   - [x] to store data?

@@ -31,7 +31,7 @@ export default function Editor({ projectId, projectData }) {
   };
 
   const previewQuery = new URLSearchParams(previewProps).toString();
-  const ogImageUrl = `https://ogsupa.vercel.app/api/v1?${previewQuery}`;
+  const ogImageUrl = `https://ogsupa.com/api/v1?${previewQuery}`;
 
   async function saveProject() {
     try {
@@ -296,7 +296,7 @@ export default function Editor({ projectId, projectData }) {
             </p>
             <CodeBlock
               className="relative mb-7"
-              code="https://ogsupa.vercel.app/api/v1?title=YOUR_TITLE"
+              code="https://ogsupa.com/api/v1?title=YOUR_TITLE"
               copy={false}
             />
             <p>

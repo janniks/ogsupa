@@ -15,8 +15,8 @@ const CodeBlock = ({ code, className, copy = true }) => {
       {copy && (
         <span className="absolute top-1 right-1">
           <button
-            onClick={(e) => {
-              navigator.clipboard.write(code);
+            onClick={() => {
+              navigator.clipboard.writeText(code);
               toast.success('Copied to clipboard');
             }}
             className="font-medium text-sm px-1 py-0.5 text-md leading-4 rounded-md"

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/janniks/ogsupa/raw/main/public/ogsupa-MV-shadow.png" alt="Logo" width="398px" />
+  <img src="https://github.com/janniks/ogsupa/raw/main/public/ogsupa-MV.png" alt="Logo" width="398px" />
       <div>
         <a href="https://twitter.com/intent/follow?screen_name=jnnksbrt">
             <img src="https://img.shields.io/twitter/url?label=Follow&style=social&url=https%3A%2F%2Ftwitter.com%2Fjnnksbrt" alt="Follow on Twitter" />

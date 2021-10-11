@@ -45,9 +45,9 @@ add our`<meta>` tag to your HTML `<head>` and you're good to go!
 - list of team members handles: [GitHub @janniks](https://github.com/janniks), [Twitter @jnnksbrt](https://twitter.com/jnnksbrt)
 - a brief description of how you used Supabase:
   - [x] to store data?
-  - [ ] realtime?
   - [x] auth?
   - [ ] storage? **COMING SOON**
+  - [ ] realtime? **NOT PLANNED**
 
 ## License ⚖️
 

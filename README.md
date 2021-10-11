@@ -1,6 +1,10 @@
 <div align="center">
   <img src="https://github.com/janniks/ogsupa/raw/main/public/ogsupa-MV-shadow.png" alt="Logo" width="398px" />
-  <p>Generate og:images for free!</p>
+      <div>
+        <a href="https://twitter.com/intent/follow?screen_name=jnnksbrt">
+            <img src="https://img.shields.io/twitter/url?label=Follow&style=social&url=https%3A%2F%2Ftwitter.com%2Fjnnksbrt" alt="Follow on Twitter" />
+          </a>
+      </div>
 </div>
 
 <h3 align="center">
@@ -8,16 +12,14 @@
   <span> · </span>
   <a href="">Demo</a>
   <span> · </span>
-  <a href="#roadmap">Roadmap</a>
+  <a href="#roadmap-">Roadmap</a>
   <span> · </span>
-  <a href="#license">License</a>
+  <a href="#license-%EF%B8%8F">License</a>
   <span> · </span>
-    <a href="https://twitter.com/intent/follow?screen_name=jnnksbrt">
-    <img src="https://img.shields.io/twitter/url?label=Follow&style=social&url=https%3A%2F%2Ftwitter.com%2Fjnnksbrt" alt="Follow on Twitter" />
-  </a>
+
 </h3>
 
-# og:supa
+# og:supa ⚡️
 
 Generate og:images for free! og:supa is an open-source og:image generator! All you have to do is
 add our`<meta>` tag to your HTML `<head>` and you're good to go!
@@ -28,15 +30,16 @@ add our`<meta>` tag to your HTML `<head>` and you're good to go!
 - 🎨 Generate customizable og:images in realtime
 - 🚀 Save many different project styles for editing
 
-## Demo
+## [Demo]()
 
-## Roadmap
+## Roadmap 🚂
 
 - [x] Add basic text, description, etc. with background color
+- [ ] Fix scroll bar layout shift bug on some browsers
 - [ ] Add background gradients
 - [ ] Add different styles with borders
 - [ ] Add image upload for logos and background images
 
-## License
+## License ⚖️
 
 [MIT](https://github.com/janniks/ogsupa/raw/main/LICENSE)

@@ -25,12 +25,22 @@ export default function IndexPage() {
 
   return (
     <>
+      <div className="absolute top-0 right-4">
+        <a
+          href="https://github.com/janniks/ogsupa"
+          target="_blank"
+          className="mt-6 -mb-20 box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm text-md leading-4 rounded-md text-white focus:outline-none bg-gray-900"
+        >
+          <StarIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
+          GitHub
+        </a>
+      </div>
       <p className="mb-8 text-2xl font-bold leading-6 border-0 border-b-4 border-indigo-600 text-gray-900">
         Generate og:images for free!
       </p>
       <div className="w-full max-w-xl">
         <div
-          className="relative py-1 pb-1.5 px-3 font-medium text-md bg-white rounded-xl p-3 pt-2 border-4 border-b-[6px] box-pink"
+          className="relative m-4 py-1 pb-1.5 px-3 font-medium text-md bg-white rounded-xl p-3 pt-2 border-4 border-b-[6px] box-pink"
           style={{
             // backgroundColor: '#ffe228',
             borderColor: '#7801fd',
@@ -119,6 +129,10 @@ export default function IndexPage() {
       </div>
       <div className="mb-32">
         <Start session={session} text="Try it out" />
+      </div>
+      <div className="max-w-lg text-center text-xs text-gray-600 -mb-8">
+        If anybody at Supabase finds this page.
+        <br /> Think of this mini-project as my application, hmu 😉
       </div>
     </>
   );

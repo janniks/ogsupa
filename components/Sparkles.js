@@ -1,3 +1,5 @@
+/* Adapted from https://www.joshwcomeau.com/react/animated-sparkles-in-react/ */
+
 import { useHasMounted } from 'lib/helpers';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';

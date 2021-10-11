@@ -1,11 +1,10 @@
 import { ClipboardIcon, PhotographIcon } from '@heroicons/react/solid';
 import OGPreview from 'components/OGPreview';
 import { SliderPicker, TwitterPicker } from 'components/react-color';
-import Sparkles from 'components/Sparkles';
-import { getProject } from 'lib/helpers';
 import { supabase } from 'lib/supabaseClient';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
+import CodeBlock from './CodeBlock';
 import Loading from './Loading';
 
 export default function Editor({ projectId, projectData }) {
@@ -32,6 +31,7 @@ export default function Editor({ projectId, projectData }) {
   };
 
   const previewQuery = new URLSearchParams(previewProps).toString();
+  const ogImageUrl = `https://ogsupa.vercel.app/api/v1?${previewQuery}`;
 
   async function saveProject() {
     try {
@@ -59,7 +59,7 @@ export default function Editor({ projectId, projectData }) {
   }
 
   return (
-    <div className="flex flex-col space-y-6 lg:py-0 md:flex-row md:space-x-6 md:space-y-0 lg:space-x-10">
+    <div className="flex flex-col mb-20 space-y-6 lg:py-0 md:flex-row md:space-x-6 md:space-y-0 lg:space-x-10">
       {/* FORM COLUMN */}
       <div className="flex flex-col min-w-[288px]">
         <form
@@ -218,73 +218,118 @@ export default function Editor({ projectId, projectData }) {
       </div>
       {/* PREVIEW COLUMN */}
       <div className="flex flex-1 flex-col">
-        <div className="rounded-md overflow-hidden box-pink">
+        <div className="m-auto rounded-md overflow-hidden box-pink">
           <OGPreview {...previewProps} />
         </div>
-        <div className="block w-[300px] md:w-[450px] lg:w-[600px] text-center mt-4 space-y-2">
-          <div className="buttons">
-            <a
-              className="box-pink-sm -rotate-1 hover:rotate-1 inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm text-md leading-4 font-medium rounded-md text-white focus:outline-none"
-              style={{ backgroundColor: '#f804ef' }}
-              href={`/preview?${previewQuery}`}
-              target="_blank"
+        <div className="buttons m-auto">
+          <div className="w-[300px] md:w-[450px] lg:w-[600px] text-center mt-4 space-y-2">
+            <div className="">
+              <a
+                className="box-pink-sm -rotate-1 hover:rotate-1 inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm text-md leading-4 font-medium rounded-md text-white focus:outline-none"
+                style={{ backgroundColor: '#f804ef' }}
+                href={`/preview?${previewQuery}`}
+                target="_blank"
+              >
+                <PhotographIcon
+                  className="-ml-0.5 mr-2 h-5 w-5"
+                  aria-hidden="true"
+                />
+                Open preview in new tab
+              </a>
+            </div>
+            <button
+              title="Copy to clipboard"
+              className="box-pink-sm rotate-3 hover:rotate-1 m-auto w-1/2 min-w-[240px] truncate px-2 py-1 text-md rounded-md border-2 border-indigo-400 bg-indigo-100  hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700"
+              style={{ backgroundColor: '#ffe228', borderColor: '#ff6152' }}
             >
-              <PhotographIcon
-                className="-ml-0.5 mr-2 h-5 w-5"
+              <ClipboardIcon
+                className="inline  -mt-1 -ml-1.5 mr-1 h-5 w-5"
+                style={{ color: '#ff6152' }}
                 aria-hidden="true"
               />
-              Open preview in new tab
-            </a>
-          </div>
-          <button
-            title="Copy to clipboard"
-            className="box-pink-sm rotate-3 hover:rotate-1 m-auto w-1/2 min-w-[240px] truncate px-2 py-1 text-md rounded-md border-2 border-indigo-400 bg-indigo-100  hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700"
-            style={{ backgroundColor: '#ffe228', borderColor: '#ff6152' }}
-          >
-            <ClipboardIcon
-              className="inline  -mt-1 -ml-1.5 mr-1 h-5 w-5"
-              style={{ color: '#ff6152' }}
-              aria-hidden="true"
-            />
-            <span className="font-medium" style={{ color: '#dd3a2a' }}>
-              Copy{' '}
-            </span>
-            <code
-              className="inline"
-              onClick={() => {
-                navigator.clipboard.writeText(
-                  `https://ogsupa.vercel.app/api/v1?${previewQuery}`
-                );
-                toast.success('Copied to clipboard');
-              }}
-            >
-              ogsupa.com?{previewQuery}
-            </code>
-          </button>
-        </div>
-        <div className="block w-[300px] md:w-[450px] lg:w-[600px] text-center mt-8 p-8">
-          <div className="relative p-4 px-3 rounded-lg border-4 bg-white">
-            <div>
-              <span className="rotate-12 text-4xl -top-4 -right-4 absolute">
-                ℹ️
+              <span className="font-medium mr-0.5" style={{ color: '#dd3a2a' }}>
+                Copy{' '}
               </span>
-            </div>
-            <p className="">
-              <span className="font-bold border-0 border-b-4">og:images</span>{' '}
-              are used to show preview thumbnails in social media. They‘re very
-              important, if you want to{' '}
-              <span className="relative">
-                <Sparkles>stand out</Sparkles>
-              </span>{' '}
-              in a sea of feeds. Too often we see an empty link preview and lose
-              interest for it‘s content. Sadly, our brains have been trained to
-              spot color in hoards of text. So, grab a
-              <span className="underline-heart">&nbsp;color&nbsp;</span>that
-              pops for a good start!
+              <code
+                className="inline"
+                onClick={() => {
+                  navigator.clipboard.writeText(ogImageUrl);
+                  toast.success('Copied to clipboard');
+                }}
+              >
+                ?{previewQuery}
+              </code>
+            </button>
+          </div>
+        </div>
+        <div className="block w-full max-w-[400px] md:max-w-[450px] lg:max-w-[600px] mt-8 p-2">
+          <div className="relative p-4 rounded-lg border-4 bg-white">
+            <span className="rotate-12 text-4xl -top-4 -right-4 absolute cursor-default">
+              ℹ️
+            </span>
+            <h2 className="text-xl font-bold mb-2">Docs</h2>
+            <p>
+              Online services use{' '}
+              <a
+                href="https://ogp.me"
+                target="_blank"
+                className="underline font-bold"
+              >
+                The Open Graph protocol
+              </a>{' '}
+              to find information about your website/article.
             </p>
+            <CodeBlock
+              className="relative mb-7"
+              code={getMetaString(ogImageUrl)}
+            />
+            <p>
+              Generating <strong>og:images</strong> with{' '}
+              <strong>og:supa</strong> couldn't be easier.
+            </p>
+            <p>
+              First, copy styled links from above and add them to your HTML{' '}
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                {'<head>'}
+              </code>
+              . The structure of a og:supa link is simple:
+            </p>
+            <CodeBlock
+              className="relative mb-7"
+              code="https://ogsupa.vercel.app/api/v1?title=YOUR_TITLE"
+              copy={false}
+            />
+            <p>
+              For Twitter add{' '}
+              <a
+                href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image"
+                target="_blank"
+                className="underline font-bold"
+              >
+                summary_large_image
+              </a>{' '}
+              for{' '}
+              <code className="bg-gray-50 rounded-md px-0.5 border-[1.5px] border-gray-300 text-[15px] font-bold">
+                twitter:card
+              </code>{' '}
+              to show large og:images in users Twitter feeds.
+            </p>
+            <CodeBlock
+              className="relative mb-4"
+              code={getTwitterMetaString(ogImageUrl)}
+            />
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+function getMetaString(ogImageUrl) {
+  return `<meta property="og:image" content="${ogImageUrl}"/>`;
+}
+
+function getTwitterMetaString(ogImageUrl) {
+  return `<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="${ogImageUrl}"/>`;
 }

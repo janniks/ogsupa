@@ -28,8 +28,7 @@ body {
     'Noto Color Emoji';
 }
 .font-serif {
-  font-family: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman',
-    Times, serif;
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 .font-mono {
   font-family: 'IBM Plex Mono', 'Noto Sans Mono', ui-monospace, SFMono-Regular,

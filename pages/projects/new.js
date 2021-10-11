@@ -1,5 +1,5 @@
 import Loading from 'components/Loading';
-import { useHasMounted } from 'lib/helpers';
+import { createEmptyProject, useHasMounted } from 'lib/helpers';
 import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
 

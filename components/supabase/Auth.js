@@ -7,7 +7,7 @@ import cn from 'classnames';
 import { supabase } from 'lib/supabaseClient';
 import { useState } from 'react';
 
-export default function Auth() {
+export default function Auth({ text }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
@@ -34,7 +34,7 @@ export default function Auth() {
           onClick={() => setIsExpanded(true)}
         >
           <PencilAltIcon className="-ml-0.5 mr-2 h-5 w-5" aria-hidden="true" />
-          Let's go!
+          {text}
         </button>
       </div>
 

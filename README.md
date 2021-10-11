@@ -1,29 +1,42 @@
-# Next.js + Tailwind CSS Example
+<div align="center">
+  <img src="https://github.com/janniks/ogsupa/raw/main/public/ogsupa-MV-shadow.png" alt="Logo" width="398px" />
+  <p>Generate og:images for free!</p>
+</div>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<h3 align="center">
+  <a href="#features">Features</a>
+  <span> · </span>
+  <a href="">Demo</a>
+  <span> · </span>
+  <a href="#roadmap">Roadmap</a>
+  <span> · </span>
+  <a href="#license">License</a>
+  <span> · </span>
+    <a href="https://twitter.com/intent/follow?screen_name=jnnksbrt">
+    <img src="https://img.shields.io/twitter/url?label=Follow&style=social&url=https%3A%2F%2Ftwitter.com%2Fjnnksbrt" alt="Follow on Twitter" />
+  </a>
+</h3>
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+# og:supa
 
-## Preview
+Generate og:images for free! og:supa is an open-source og:image generator! All you have to do is
+add our`<meta>` tag to your HTML `<head>` and you're good to go!
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+## Features
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- 🎉 Empty link previews are a thing of the past!
+- 🎨 Generate customizable og:images in realtime
+- 🚀 Save many different project styles for editing
 
-## Deploy your own
+## Demo
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Roadmap
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- [x] Add basic text, description, etc. with background color
+- [ ] Add background gradients
+- [ ] Add different styles with borders
+- [ ] Add image upload for logos and background images
 
-## How to use
+## License
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+[MIT](https://github.com/janniks/ogsupa/raw/main/LICENSE)

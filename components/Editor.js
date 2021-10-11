@@ -1,4 +1,5 @@
 import { ClipboardIcon, PhotographIcon } from '@heroicons/react/solid';
+import cn from 'classnames';
 import OGPreview from 'components/OGPreview';
 import { SliderPicker, TwitterPicker } from 'components/react-color';
 import { supabase } from 'lib/supabaseClient';
@@ -16,8 +17,6 @@ export default function Editor({ projectId, projectData }) {
     setProject((project) => ({ ...project, [key]: value }));
     setHasChanges(true);
   };
-
-  // useEffect(async () => setProject(await getProject(projectId)), [projectId]);
 
   if (!project) return <Loading />;
 
@@ -38,10 +37,6 @@ export default function Editor({ projectId, projectData }) {
       setIsSaving(true);
       const updates = {
         ...project,
-        // id: projectId,
-        // user_id: supabase.auth.user().id,
-        // title,
-        // description,
         updated_at: new Date(),
       };
       let { error } = await supabase.from('projects').upsert(updates, {
@@ -66,9 +61,6 @@ export default function Editor({ projectId, projectData }) {
           className="rounded-xl p-3 pt-2 bg-white border-4 border-b-[6px] box-pink"
           style={{
             borderColor: '#7801fd',
-            // borderStyle: 'dashed',
-            // boxShadow: '0 0 0 4px white',
-            // backgroundColor: '#f3b0a0',
           }}
         >
           <div className="space-y-6 gap-x-4">
@@ -208,11 +200,15 @@ export default function Editor({ projectId, projectData }) {
             </p>
           )}
           <button
-            className="inline mt-1 px-2 py-0.5 rounded-lg text-white bg-white box-pink-sm"
+            className={cn(
+              'inline mt-1 px-2 py-0.5 rounded-lg text-white bg-white box-pink-sm',
+              { 'text-indigo-400': isSaving }
+            )}
             style={{ backgroundColor: '#7801fd' }}
             onClick={saveProject}
+            disabled={isSaving}
           >
-            {isSaving ? <Loading /> : 'Save'}
+            Save
           </button>
         </div>
       </div>

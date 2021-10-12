@@ -60,8 +60,8 @@ const ProjectSwitcher = ({ project, projects }) => {
               <input
                 name="title"
                 type="text"
-                className="bg-transparent font-medium border-transparent truncate cursor-text block p-1 pl-2 rounded-md border-2 hover:border-gray-600 focus:border-gray-600"
-                size={16}
+                className="bg-transparent w-32 md:w-40 font-medium border-transparent truncate cursor-text block p-1 pl-2 rounded-md border-2 hover:border-gray-600 focus:border-gray-600"
+                // size={16}
                 defaultValue={name}
                 onChange={({ target }) => setName(target.value)}
               />

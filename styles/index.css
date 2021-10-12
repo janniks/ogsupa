@@ -147,3 +147,8 @@ div.background {
   padding-bottom: 20px;
   color: #e62000;
 }
+
+body {
+  /* Always show scrollbar, not super nice, but better than layout shift on load */
+  overflow-y: scroll;
+}

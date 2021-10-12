@@ -8,7 +8,7 @@ const Start = ({ session, text }) => {
       {session ? (
         <Link href="/projects">
           <a
-            className="mt-6 box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm text-md leading-4 rounded-md text-white focus:outline-none"
+            className="mt-6 mb-[3.75rem] box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 border-2 border-transparent shadow-sm text-md leading-4 rounded-md text-white focus:outline-none"
             style={{ backgroundColor: '#f804ef' }}
           >
             <PencilAltIcon

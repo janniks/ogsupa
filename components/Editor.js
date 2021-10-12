@@ -54,11 +54,11 @@ export default function Editor({ projectId, projectData }) {
   }
 
   return (
-    <div className="flex flex-col mb-20 space-y-6 lg:py-0 md:flex-row md:space-x-6 md:space-y-0 lg:space-x-10">
+    <div className="flex flex-col items-center w-full mb-20 space-y-6 md:items-start md:w-auto md:flex-row md:space-x-4 md:space-y-0 lg:py-0 lg:space-x-10">
       {/* FORM COLUMN */}
-      <div className="flex flex-col min-w-[288px]">
+      <div className="flex flex-col min-w-[288px] max-w-[380px]">
         <form
-          className="rounded-xl p-3 pt-2 bg-white border-4 border-b-[6px] box-pink"
+          className="rounded-xl mx-2 sm:m-0 p-3 pt-2 bg-white border-4 border-b-[6px] box-pink"
           style={{
             borderColor: '#7801fd',
           }}
@@ -74,7 +74,7 @@ export default function Editor({ projectId, projectData }) {
               <input
                 name="title"
                 type="text"
-                className="input mt-1 shadow-sm block w-full border-gray-300 rounded-md"
+                className="input mt-1 text-sm md:text-base shadow-sm block w-full border-gray-300 rounded-md"
                 value={project.title}
                 onChange={({ target }) => setProperty('title', target.value)}
               />
@@ -89,7 +89,7 @@ export default function Editor({ projectId, projectData }) {
               <textarea
                 name="description"
                 rows={3}
-                className="input mt-1 shadow-sm block w-full border border-gray-300 rounded-md"
+                className="input mt-1 text-sm md:text-base shadow-sm block w-full border border-gray-300 rounded-md"
                 value={project.description}
                 onChange={({ target }) =>
                   setProperty('description', target.value)
@@ -108,7 +108,7 @@ export default function Editor({ projectId, projectData }) {
                 <select
                   name="country"
                   autoComplete="country"
-                  className="input shadow-sm block w-full border-gray-300 rounded-md"
+                  className="input text-sm md:text-base shadow-sm block w-full border-gray-300 rounded-md"
                   value={project.font_style}
                   onChange={({ target }) =>
                     setProperty('font_style', target.value)
@@ -169,7 +169,7 @@ export default function Editor({ projectId, projectData }) {
                   name="left"
                   type="text"
                   size={1}
-                  className="input w-full mt-1 shadow-sm  border-gray-300 rounded-md"
+                  className="input w-full mt-1 text-sm md:text-base shadow-sm border-gray-300 rounded-md"
                   value={project.left_meta}
                   onChange={(e) => setProperty('left_meta', e.target.value)}
                 />
@@ -185,7 +185,7 @@ export default function Editor({ projectId, projectData }) {
                   name="right"
                   type="text"
                   size={1}
-                  className="input w-full mt-1 shadow-sm  border-gray-300 rounded-md"
+                  className="input w-full mt-1 text-sm md:text-base shadow-sm border-gray-300 rounded-md"
                   value={project.right_meta}
                   onChange={(e) => setProperty('right_meta', e.target.value)}
                 />
@@ -193,7 +193,7 @@ export default function Editor({ projectId, projectData }) {
             </div>
           </div>
         </form>
-        <div className="text-right">
+        <div className="text-right mr-2 sm:mr-0">
           {hasChanges && (
             <p className="inline mr-2 text-sm text-gray-600 italic">
               Unsaved changes
@@ -213,7 +213,7 @@ export default function Editor({ projectId, projectData }) {
         </div>
       </div>
       {/* PREVIEW COLUMN */}
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-col w-full items-center">
         <div className="m-auto rounded-md overflow-hidden box-pink">
           <OGPreview {...previewProps} />
         </div>
@@ -258,9 +258,9 @@ export default function Editor({ projectId, projectData }) {
             </button>
           </div>
         </div>
-        <div className="block w-full max-w-[400px] md:max-w-[450px] lg:max-w-[600px] mt-8 p-2">
+        <div className="overflow-hidden w-full max-w-[400px] md:max-w-[450px] lg:max-w-[600px] mt-8 p-4">
           <div className="relative p-4 rounded-lg border-4 bg-white">
-            <span className="rotate-12 text-4xl -top-4 -right-4 absolute cursor-default">
+            <span className="rotate-12 text-4xl absolute -top-4 -right-4 cursor-default">
               ℹ️
             </span>
             <h2 className="text-xl font-bold mb-2">Docs</h2>
@@ -275,10 +275,7 @@ export default function Editor({ projectId, projectData }) {
               </a>{' '}
               to find information about your website/article.
             </p>
-            <CodeBlock
-              className="relative mb-7"
-              code={getMetaString(ogImageUrl)}
-            />
+            <CodeBlock className="mb-7" code={getMetaString(ogImageUrl)} />
             <p>
               Generating <strong>og:images</strong> with{' '}
               <strong>og:supa</strong> couldn't be easier.
@@ -291,7 +288,7 @@ export default function Editor({ projectId, projectData }) {
               . The structure of a og:supa link is simple:
             </p>
             <CodeBlock
-              className="relative mb-7"
+              className="mb-7"
               code="https://ogsupa.com/api/v1?title=YOUR_TITLE&des..."
               copy={false}
             />
@@ -338,7 +335,7 @@ export default function Editor({ projectId, projectData }) {
               to show large og:images in users Twitter feeds.
             </p>
             <CodeBlock
-              className="relative mb-4"
+              className="mb-4"
               code={getTwitterMetaString(ogImageUrl)}
             />
           </div>

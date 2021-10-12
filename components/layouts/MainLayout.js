@@ -46,39 +46,45 @@ const MainLayout = ({ children }) => {
           {children}
           <div className="flex-1"></div>
           <footer className="text-center w-full my-10 mx-4">
-            <div className="inline-block m-4 mx-auto rounded-3xl box-pink">
-              <div className="inline-block pl-6 rounded-3xl og-parent">
-                <a
-                  className="relative inline-block p-4 bg-white rounded-3xl og font-medium"
-                  href="https://twitter.com/jnnksbrt/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Built in <span className="relative top-[1px]">🇦🇹</span>&nbsp;
-                  {!isSafari && <>&nbsp;</>}by{' '}
-                  <span className="font-bold underline">@jnnksbrt</span> —
-                  powered by <strong>Supabase ⚡️</strong>
-                  <div className="absolute top-0 right-1 text-xs font-extrabold text-gray-200">
-                    <span className="sm:hidden md:hidden lg:hidden xl:hidden">
-                      &bull;
-                    </span>
-                    <span className="hidden sm:inline md:hidden">sm</span>
-                    <span className="hidden md:inline lg:hidden">md</span>
-                    <span className="hidden lg:inline xl:hidden">lg</span>
-                    <span className="hidden xl:inline">xl</span>
-                  </div>
-                </a>
+            <div className="inline-block m-4 mx-auto p-4">
+              <div className="rounded-3xl box-pink">
+                <div className="inline-block pl-6 rounded-3xl og-parent">
+                  <a
+                    className="relative inline-block p-4 bg-white rounded-3xl og font-medium"
+                    href="https://twitter.com/jnnksbrt/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Built in <span className="relative top-[1px]">🇦🇹</span>
+                    &nbsp;
+                    {!isSafari && <>&nbsp;</>}by{' '}
+                    <span className="font-bold underline">@jnnksbrt</span> —
+                    powered by <strong>Supabase ⚡️</strong>
+                    <div className="absolute top-0 right-1 text-xs font-extrabold text-gray-200">
+                      <span className="sm:hidden md:hidden lg:hidden xl:hidden">
+                        &bull;
+                      </span>
+                      <span className="hidden sm:inline md:hidden">sm</span>
+                      <span className="hidden md:inline lg:hidden">md</span>
+                      <span className="hidden lg:inline xl:hidden">lg</span>
+                      <span className="hidden xl:inline">xl</span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </footer>
         </div>
-        <div className="absolute top-0 right-4">
+        <div className="absolute -top-2 right-2 sm:top-0 sm:right-4">
           <a
             href="https://github.com/janniks/ogsupa"
             target="_blank"
-            className="mt-6 -mb-20 box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm text-md leading-4 rounded-md text-white focus:outline-none bg-gray-900"
+            className="text-sm sm:text-base mt-6 -mb-20 box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm leading-4 rounded-md text-white focus:outline-none bg-gray-900"
           >
-            <StarIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
+            <StarIcon
+              className="-ml-0.5 mr-1.5 h-4 w-4 sm:h-5 sm:w-5"
+              aria-hidden="true"
+            />
             GitHub
           </a>
         </div>

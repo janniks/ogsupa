@@ -32,7 +32,7 @@ export default function Auth({ text }) {
     <div className="flex flex-col">
       <div className="mt-6 text-center">
         <button
-          className="box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 my-2 border-2 border-transparent shadow-sm text-md leading-4 rounded-md text-white focus:outline-none"
+          className="box-pink-sm -rotate-1 hover:rotate-1 font-bold inline-flex items-center px-2 py-1 border-2 border-transparent shadow-sm text-md leading-4 rounded-md text-white focus:outline-none"
           style={{ backgroundColor: '#f804ef' }}
           onClick={() => setIsExpanded(true)}
         >

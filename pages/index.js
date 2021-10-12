@@ -20,17 +20,17 @@ export default function IndexPage() {
     });
   }, []);
 
-  if (!hasMounted) return null;
-  if (isLoading && session) setIsLoading(false);
+  // if (!hasMounted) return null;
+  // if (isLoading && session) setIsLoading(false);
 
   return (
     <>
-      <p className="mb-8 text-2xl font-bold leading-6 border-0 border-b-4 border-indigo-600 text-gray-900">
+      <p className="mb-8 text-xl sm:text-2xl font-bold leading-6 border-0 border-b-4 border-indigo-600 text-gray-900">
         Generate og:images for free!
       </p>
       <div className="w-full max-w-xl">
         <div
-          className="relative m-4 py-1 pb-1.5 px-3 font-medium text-md bg-white rounded-xl p-3 pt-2 border-4 border-b-[6px] box-pink"
+          className="relative m-5 py-1 pb-1.5 px-3 font-medium text-md bg-white rounded-xl p-3 pt-2 border-4 border-b-[6px] box-pink"
           style={{
             // backgroundColor: '#ffe228',
             borderColor: '#7801fd',
@@ -56,7 +56,7 @@ export default function IndexPage() {
         </div>
       </div>
       <Start session={session} text="Go to editor!" />
-      <div className="w-full max-w-4xl text-center mt-8 p-16">
+      <div className="w-full max-w-4xl text-center p-4 sm:p-16">
         <img
           src="/no-og.png"
           alt="Screenshot of Twitter link without preview"
@@ -114,15 +114,15 @@ export default function IndexPage() {
           </p>
         </div>
       </div>
-      <div className="w-full max-w-4xl text-center p-16 pb-8">
+      <div className="w-full max-w-4xl text-center p-4 mb-2 sm:p-16 sm:mb-8">
         <img src="/og.png" alt="Screenshot of Twitter link with preview" />
       </div>
       <div className="mb-32">
         <Start session={session} text="Try it out" />
       </div>
       <div className="max-w-lg text-center text-xs text-gray-600 -mb-8">
-        If anybody at Supabase finds this page.
-        <br /> Think of this mini-project as my application, hmu 😉
+        If anybody at Supabase finds this page,
+        <br /> think of this mini-project as my application, hmu 😉
       </div>
     </>
   );

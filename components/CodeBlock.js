@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 const CodeBlock = ({ code, className, copy = true }) => {
   return (
-    <div className={className}>
+    <div className={`relative ${className}`}>
       <SyntaxHighlighter
         language="xml"
         style={a11yDark}

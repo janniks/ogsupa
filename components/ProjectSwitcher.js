@@ -2,13 +2,10 @@ import { Listbox, Transition } from '@headlessui/react';
 import { PlusIcon, SelectorIcon } from '@heroicons/react/solid';
 import { useDebounce } from 'lib/helpers';
 import { supabase } from 'lib/supabaseClient';
-import { useRouter } from 'next/dist/client/router';
-
 import Link from 'next/link';
 import { Fragment, useEffect } from 'react';
 
 const ProjectSwitcher = ({ project, projects }) => {
-  const router = useRouter();
   const [name, setName] = useDebounce(project.name, 1000);
 
   useEffect(() => {
@@ -19,14 +16,17 @@ const ProjectSwitcher = ({ project, projects }) => {
   async function updateProject() {
     try {
       // setIsSaving(true);
-      const updates = {
-        ...project,
+      const update = {
         name,
         updated_at: new Date(),
       };
-      let { error } = await supabase.from('projects').upsert(updates, {
-        returning: 'minimal',
-      });
+      console.log('project', project);
+      let { error } = await supabase
+        .from('projects')
+        .update(update, {
+          returning: 'minimal',
+        })
+        .eq('id', project.id);
       if (error) {
         throw error;
       }
@@ -83,7 +83,7 @@ const ProjectSwitcher = ({ project, projects }) => {
                   {projects
                     .filter((p) => p.id !== project.id)
                     .map((p, i) => (
-                      <a href={`/projects/${p.id}`}>
+                      <a key={i} href={`/projects/${p.id}`}>
                         <Listbox.Option
                           key={i}
                           value={p.id}

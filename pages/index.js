@@ -1,27 +1,20 @@
-import { PencilAltIcon, StarIcon } from '@heroicons/react/solid';
+import { StarIcon } from '@heroicons/react/solid';
 import Sparkles from 'components/Sparkles';
 import Start from 'components/Start';
-import Auth from 'components/supabase/Auth';
-import { useHasMounted } from 'lib/helpers';
 import { supabase } from 'lib/supabaseClient';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function IndexPage() {
-  const hasMounted = useHasMounted();
-  const [isLoading, setIsLoading] = useState(true);
   const [session, setSession] = useState(null);
 
   useEffect(() => {
     setSession(supabase.auth.session());
 
-    supabase.auth.onAuthStateChange((_event, session) => {
+    supabase.auth.onAuthStateChange((event, session) => {
+      console.log('event', event);
       setSession(session);
     });
   }, []);
-
-  // if (!hasMounted) return null;
-  // if (isLoading && session) setIsLoading(false);
 
   return (
     <>
@@ -32,12 +25,10 @@ export default function IndexPage() {
         <div
           className="relative m-5 py-1 pb-1.5 px-3 font-medium text-md bg-white rounded-xl p-3 pt-2 border-4 border-b-[6px] box-pink"
           style={{
-            // backgroundColor: '#ffe228',
             borderColor: '#7801fd',
             color: '#7e0079',
           }}
         >
-          {/* <p className="text-2xl font-bold">Welcome to og:supa!</p> */}
           <span className="rotate-12 text-5xl -top-4 -right-4 absolute cursor-default">
             ⚡️
           </span>

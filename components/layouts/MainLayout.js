@@ -3,19 +3,19 @@ import Head from 'next/head';
 import { Toaster } from 'react-hot-toast';
 
 const MainLayout = ({ children }) => {
-  // todo: don't do this on every render
-  const isSafari =
-    typeof window !== 'undefined'
-      ? /constructor/i.test(window.HTMLElement) ||
-        (function (p) {
-          return p.toString() === '[object SafariRemoteNotification]';
-        })(
-          !window['safari'] ||
-            (typeof safari !== 'undefined' && safari.pushNotification)
-        )
-      : false;
+  // todo: fix emoji whitespace rendering
+  // const isSafari =
+  //   typeof window !== 'undefined'
+  //     ? /constructor/i.test(window.HTMLElement) ||
+  //       (function (p) {
+  //         return p.toString() === '[object SafariRemoteNotification]';
+  //       })(
+  //         !window['safari'] ||
+  //           (typeof safari !== 'undefined' && safari.pushNotification)
+  //       )
+  //     : false;
 
-  // const isSafari = false;
+  const isSafari = false;
 
   return (
     <div className="">

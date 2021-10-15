@@ -8,15 +8,18 @@ const ProjectPage = () => {
   const hasMounted = useHasMounted();
   const [session, setSession] = useState(null);
 
-  // useEffect(() => {
-  //   setSession(supabase.auth.session());
+  useEffect(() => {
+    setSession(supabase.auth.session());
 
-  //   supabase.auth.onAuthStateChange((_event, session) => {
-  //     setSession(session);
-  //   });
-  // }, []);
+    supabase.auth.onAuthStateChange((event, session) => {
+      console.log('onAuthStateChange', event);
+      setSession(session);
+    });
+  }, []);
 
   useEffect(async () => {
+    if (!session) return;
+
     const projects = await getProjects();
     if (projects?.length > 0) {
       router.push(`/projects/${projects[0].id}`);
@@ -24,7 +27,7 @@ const ProjectPage = () => {
     }
     const newProject = await createEmptyProject();
     router.push(`/projects/${newProject.id}`);
-  }, []);
+  }, [session]);
 
   if (!hasMounted) return null;
 

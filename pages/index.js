@@ -8,11 +8,10 @@ export default function IndexPage() {
   const [session, setSession] = useState(null);
 
   useEffect(() => {
-    const session = supabase.auth.session();
-    setSession(session);
+    setSession(supabase.auth.session());
 
     supabase.auth.onAuthStateChange((event, session) => {
-      console.log('event', event);
+      console.log('onAuthStateChange', event);
       setSession(session);
     });
   }, []);

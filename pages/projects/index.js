@@ -1,5 +1,6 @@
 import Loading from 'components/Loading';
 import { createEmptyProject, getProjects, useHasMounted } from 'lib/helpers';
+import { supabase } from 'lib/supabaseClient';
 import { useRouter } from 'next/dist/client/router';
 import { useEffect, useState } from 'react';
 

@@ -47,10 +47,11 @@ export default function IndexPage() {
         </div>
       </div>
       <Start session={session} text="Go to editor!" />
-      <div className="w-full -rotate-2 max-w-4xl text-center p-4 sm:p-16">
+      <div className="w-full max-w-4xl text-center p-4 sm:p-16">
         <img
           src="/no-og.png"
           alt="Screenshot of Twitter link without preview"
+          className="-rotate-2"
         />
 
         <hr className="mt-28 mb-2" />
@@ -105,8 +106,12 @@ export default function IndexPage() {
           </p>
         </div>
       </div>
-      <div className="w-full rotate-2 max-w-4xl text-center p-4 mb-2 sm:p-16 sm:mb-8">
-        <img src="/og.png" alt="Screenshot of Twitter link with preview" />
+      <div className="w-full max-w-4xl text-center p-4 mb-2 sm:p-16 sm:mb-8">
+        <img
+          src="/og.png"
+          alt="Screenshot of Twitter link with preview"
+          className="rotate-2"
+        />
       </div>
       <div className="mb-32">
         <Start session={session} text="Try it out" />

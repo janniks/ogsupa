@@ -15,7 +15,6 @@ const ProjectSwitcher = ({ project, projects }) => {
   console.log('ProjectSwitcher <render>');
   async function updateProject() {
     try {
-      // setIsSaving(true);
       const update = {
         name,
         updated_at: new Date(),
@@ -32,8 +31,6 @@ const ProjectSwitcher = ({ project, projects }) => {
       }
     } catch (error) {
       console.error(error.message);
-    } finally {
-      // setIsSaving(false);
     }
   }
 

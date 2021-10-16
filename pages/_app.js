@@ -1,5 +1,5 @@
-// import 'tailwindcss/tailwind.css'
 import MainLayout from 'components/layouts/MainLayout';
+import PlausibleProvider from 'next-plausible';
 import '../styles/index.css';
 
 function defaultGetLayout(page) {
@@ -9,7 +9,11 @@ function defaultGetLayout(page) {
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || defaultGetLayout;
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(
+    <PlausibleProvider domain="ogsupa.com">
+      <Component {...pageProps} />
+    </PlausibleProvider>
+  );
 }
 
 export default MyApp;

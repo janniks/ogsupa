@@ -26,6 +26,10 @@ const MainLayout = ({ children }) => {
             <title>ogsupa</title>
             <link rel="icon" href="/favicon.ico" />
             <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:creator" content="@jnnksbrt" />
+            <meta name="twitter:title" content="ogsupa" />
+            <meta property="og:title" content="ogsupa" />
+            <meta property="og:url" content="https://ogsupa.com" />
             <meta
               property="og:image"
               content="https://ogsupa.com/ogimage.png"

@@ -117,8 +117,6 @@ export default function IndexPage() {
         <Start session={session} text="Try it out" />
       </div>
       <div className="max-w-lg text-center text-xs text-gray-600 -mb-8">
-        If anybody at Supabase finds this page,
-        <br /> think of this mini-project as my application, hmu 😉
       </div>
     </>
   );
